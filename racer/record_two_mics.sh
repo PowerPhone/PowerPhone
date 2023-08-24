@@ -1,0 +1,21 @@
+#!/bin/sh
+# recording - built-in mics
+tinymix "IN1 OSR" "6.144MHz"
+tinymix "IN2 OSR" "6.144MHz"
+tinymix "Sample Rate 3" "192kHz"
+tinymix "In Rate" "SYNCCLK rate 3"
+tinymix "LHPF1 Input 1" "IN1L"
+tinymix "LHPF2 Input 1" "IN2L"
+tinymix "AIF1TX1 Input 1" "IN1L"
+tinymix "AIF1TX2 Input 1" "IN2L"
+tinymix "AIF1TX1 Input 1 Volume" "48"
+tinymix "AIF1TX2 Input 1 Volume" "48"
+tinymix "IN1L Volume" "31"
+tinymix "IN2L Volume" "31"
+tinymix "IN1L Digital Volume" "80"
+tinymix "IN2L Digital Volume" "80"
+tinymix "SEN_MI2S_TX Format" "S16_LE"
+tinymix "SEN_MI2S_TX SampleRate" "KHZ_192"
+tinymix "SEN_MI2S_TX Channels" "Two"
+tinymix "MultiMedia1 Mixer SEN_MI2S_TX" "1"
+tinycap $1 -c 2 -r 192000 -b 16 -p 19200
